@@ -21,18 +21,20 @@ STREAM_PAGES = [
 
 def scrape_m3u8(page, url):
     m3u8_url = None
+    m3u8_headers = {}
 
     def handle_request(request):
-        nonlocal m3u8_url
+        nonlocal m3u8_url, m3u8_headers
         if 'playlist.m3u8' in request.url and m3u8_url is None:
             m3u8_url = request.url
+            m3u8_headers = request.headers
             print(f'Found m3u8: {request.url}')
+            print(f'Headers: {dict(request.headers)}')
 
     page.on('request', handle_request)
 
     try:
         page.goto(url, wait_until='networkidle', timeout=30000)
-        # Wait up to 10 seconds for m3u8 to appear
         for _ in range(20):
             if m3u8_url:
                 break
@@ -41,7 +43,7 @@ def scrape_m3u8(page, url):
         print(f'Error loading {url}: {e}')
 
     page.remove_listener('request', handle_request)
-    return m3u8_url
+    return m3u8_url, m3u8_headers
 
 
 def main():
@@ -59,13 +61,21 @@ def main():
             for stream in match['streams']:
                 print(f'Scraping {stream["label"]} for {match["title"]}...')
                 page = context.new_page()
-                m3u8 = scrape_m3u8(page, stream['url'])
+                m3u8, headers = scrape_m3u8(page, stream['url'])
                 page.close()
 
                 if m3u8:
+                    # Extract key headers for playback
+                    playback_headers = {
+                        'Referer': headers.get('referer', 'https://one.timesup.top/'),
+                        'Origin': headers.get('origin', 'https://one.timesup.top'),
+                        'User-Agent': headers.get('user-agent', ''),
+                        'Cookie': headers.get('cookie', ''),
+                    }
                     resolved_streams.append({
                         'label': stream['label'],
-                        'url': m3u8
+                        'url': m3u8,
+                        'headers': playback_headers
                     })
                 else:
                     print(f'No m3u8 found for {stream["label"]}')
@@ -78,7 +88,6 @@ def main():
 
         browser.close()
 
-    # Save results
     with open('streams.json', 'w') as f:
         json.dump({
             'updated': time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -86,7 +95,6 @@ def main():
         }, f, indent=2)
 
     print(f'Done. Found {len(results)} matches.')
-    print(json.dumps(results, indent=2))
 
 
 if __name__ == '__main__':
