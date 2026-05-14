@@ -3,6 +3,7 @@ import json
 import time
 import requests
 import os
+import re
 
 STREAM_PAGES = [
     {'title': 'IPL 2026', 'streams': [
@@ -48,24 +49,36 @@ def scrape_stream(page, url):
 
     if m3u8_url and m3u8_headers:
         try:
-            # Fetch the actual m3u8 content using the real browser session headers
+            # Fetch level 1 master playlist
             r = requests.get(m3u8_url, headers=m3u8_headers, timeout=15)
             if r.status_code == 200 and '#EXTM3U' in r.text:
-                m3u8_content = r.text
-                print(f'Got m3u8 content ({len(m3u8_content)} bytes)')
-                print(m3u8_content[:500])
+                print(f'Level 1 content: {r.text}')
+
+                # Follow to level 2 playlist
+                level2 = re.search(r'(https?://[^\s]+playlist\.m3u8[^\s]*)', r.text)
+                if level2:
+                    level2_url = level2.group(1)
+                    print(f'Following to level 2: {level2_url}')
+                    r2 = requests.get(level2_url, headers=m3u8_headers, timeout=15)
+                    print(f'Level 2 status: {r2.status_code}')
+                    print(f'Level 2 content: {r2.text[:1000]}')
+                    if r2.status_code == 200 and '#EXTM3U' in r2.text:
+                        m3u8_content = r2.text
+                        m3u8_url = level2_url
+                    else:
+                        m3u8_content = r.text
+                else:
+                    m3u8_content = r.text
             else:
-                print(f'Failed to fetch m3u8 content: {r.status_code}')
-                print(r.text[:200])
+                print(f'Failed level 1: {r.status_code} - {r.text[:200]}')
         except Exception as e:
-            print(f'Error fetching m3u8 content: {e}')
+            print(f'Error fetching m3u8: {e}')
 
     return m3u8_url, m3u8_headers, m3u8_content
 
 
 def main():
     results = []
-    playlists = {}
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -84,7 +97,7 @@ def main():
 
                 if m3u8_url:
                     stream_key = match['title'].replace(' ', '_') + '_' + stream['label'].replace(' ', '_')
-                    
+
                     stream_data = {
                         'label': stream['label'],
                         'url': m3u8_url,
@@ -96,7 +109,6 @@ def main():
                     }
 
                     if content:
-                        # Save playlist content to file
                         playlist_file = f'playlists/{stream_key}.m3u8'
                         os.makedirs('playlists', exist_ok=True)
                         with open(playlist_file, 'w') as f:
