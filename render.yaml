@@ -2,6 +2,6 @@ services:
   - type: web
     name: sportsbox-server
     env: python
-    buildCommand: pip install -r requirements.txt && python -m playwright install chromium
+    buildCommand: pip install -r requirements.txt && python -m playwright install --with-deps chromium
     startCommand: gunicorn app:app --timeout 120
     plan: free
