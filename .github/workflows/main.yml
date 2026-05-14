@@ -1,4 +1,4 @@
-nname: Scrape WebCric
+name: Scrape WebCric
 
 on:
   schedule:
