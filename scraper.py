@@ -63,7 +63,15 @@ def scrape_stream(page, url):
                     print(f'Level 2 status: {r2.status_code}')
                     print(f'Level 2 content: {r2.text[:1000]}')
                     if r2.status_code == 200 and '#EXTM3U' in r2.text:
-                        m3u8_content = r2.text
+                        # Fix relative segment URLs to absolute
+                        base = level2_url.split('playlist.m3u8')[0]
+                        fixed = []
+                        for line in r2.text.splitlines():
+                            if line.startswith('media_'):
+                                fixed.append(base + line)
+                            else:
+                                fixed.append(line)
+                        m3u8_content = '\n'.join(fixed)
                         m3u8_url = level2_url
                     else:
                         m3u8_content = r.text
