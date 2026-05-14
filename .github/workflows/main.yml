@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add streams.json
+          git add streams.json playlists/
           git diff --staged --quiet || git commit -m "Update streams"
           git push
