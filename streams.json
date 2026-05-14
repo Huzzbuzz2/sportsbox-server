@@ -1,68 +1,74 @@
 {
-  "updated": "2026-05-14 21:06:12",
+  "updated": "2026-05-14 21:13:08",
   "matches": [
     {
       "title": "IPL 2026",
       "streams": [
         {
           "label": "Stream 1",
-          "url": "https://muc002.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Stream_1.m3u8",
+          "has_content": true
         },
         {
           "label": "Stream 2",
-          "url": "https://muc002.myturn1.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Stream_2.m3u8",
+          "has_content": true
         },
         {
           "label": "Stream HD",
-          "url": "https://plu002.myturn1.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Stream_HD.m3u8",
+          "has_content": true
         },
         {
           "label": "Star Sports",
-          "url": "https://plu002.myturn1.top:8088/live/starsports01/playlist.m3u8?id=123144&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/starsports01/playlist.m3u8?id=123144&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Star_Sports.m3u8",
+          "has_content": true
         },
         {
           "label": "Willow HD",
-          "url": "https://muc001.myturn1.top:8088/live/webcricwillow/playlist.m3u8?id=120375&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc002.myturn1.top:8088/live/webcricwillow/playlist.m3u8?id=120375&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Willow_HD.m3u8",
+          "has_content": true
         },
         {
           "label": "Hindi",
-          "url": "https://mut001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Hindi.m3u8",
+          "has_content": true
         }
       ]
     },
@@ -71,33 +77,36 @@
       "streams": [
         {
           "label": "Stream 1",
-          "url": "https://mut001.myturn1.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc002.myturn1.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_BAN_Stream_1.m3u8",
+          "has_content": true
         },
         {
           "label": "Stream 2",
-          "url": "https://plu002.myturn1.top:8088/live/webcricm05/playlist.m3u8?id=114516&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc001.myturn1.top:8088/live/webcricm05/playlist.m3u8?id=114516&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_BAN_Stream_2.m3u8",
+          "has_content": true
         },
         {
           "label": "Stream 3",
-          "url": "https://mut001.myturn1.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=ff4987c91819287cc8d7066405a26e5ece7452cd0042a46d80821fd36dad7222f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=4027c9ccbf8d8a2d16ac761e530c97b0e63fc4ee77ea888ade23d42419b0a418f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
-            "Origin": "https://one.timesup.top",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
-            "Cookie": ""
-          }
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_BAN_Stream_3.m3u8",
+          "has_content": true
         }
       ]
     }
