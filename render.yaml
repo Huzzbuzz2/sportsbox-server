@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: sportsbox-server
+    env: python
+    buildCommand: pip install -r requirements.txt && playwright install chromium && playwright install-deps chromium
+    startCommand: gunicorn app:app
+    plan: free
