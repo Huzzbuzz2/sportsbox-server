@@ -1,6 +1,8 @@
 from playwright.sync_api import sync_playwright
 import json
 import time
+import requests
+import os
 
 STREAM_PAGES = [
     {'title': 'IPL 2026', 'streams': [
@@ -19,17 +21,17 @@ STREAM_PAGES = [
 ]
 
 
-def scrape_m3u8(page, url):
+def scrape_stream(page, url):
     m3u8_url = None
     m3u8_headers = {}
+    m3u8_content = None
 
     def handle_request(request):
         nonlocal m3u8_url, m3u8_headers
         if 'playlist.m3u8' in request.url and m3u8_url is None:
             m3u8_url = request.url
-            m3u8_headers = request.headers
+            m3u8_headers = dict(request.headers)
             print(f'Found m3u8: {request.url}')
-            print(f'Headers: {dict(request.headers)}')
 
     page.on('request', handle_request)
 
@@ -43,11 +45,27 @@ def scrape_m3u8(page, url):
         print(f'Error loading {url}: {e}')
 
     page.remove_listener('request', handle_request)
-    return m3u8_url, m3u8_headers
+
+    if m3u8_url and m3u8_headers:
+        try:
+            # Fetch the actual m3u8 content using the real browser session headers
+            r = requests.get(m3u8_url, headers=m3u8_headers, timeout=15)
+            if r.status_code == 200 and '#EXTM3U' in r.text:
+                m3u8_content = r.text
+                print(f'Got m3u8 content ({len(m3u8_content)} bytes)')
+                print(m3u8_content[:500])
+            else:
+                print(f'Failed to fetch m3u8 content: {r.status_code}')
+                print(r.text[:200])
+        except Exception as e:
+            print(f'Error fetching m3u8 content: {e}')
+
+    return m3u8_url, m3u8_headers, m3u8_content
 
 
 def main():
     results = []
+    playlists = {}
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -61,24 +79,35 @@ def main():
             for stream in match['streams']:
                 print(f'Scraping {stream["label"]} for {match["title"]}...')
                 page = context.new_page()
-                m3u8, headers = scrape_m3u8(page, stream['url'])
+                m3u8_url, headers, content = scrape_stream(page, stream['url'])
                 page.close()
 
-                if m3u8:
-                    # Extract key headers for playback
-                    playback_headers = {
-                        'Referer': headers.get('referer', 'https://one.timesup.top/'),
-                        'Origin': headers.get('origin', 'https://one.timesup.top'),
-                        'User-Agent': headers.get('user-agent', ''),
-                        'Cookie': headers.get('cookie', ''),
-                    }
-                    resolved_streams.append({
+                if m3u8_url:
+                    stream_key = match['title'].replace(' ', '_') + '_' + stream['label'].replace(' ', '_')
+                    
+                    stream_data = {
                         'label': stream['label'],
-                        'url': m3u8,
-                        'headers': playback_headers
-                    })
-                else:
-                    print(f'No m3u8 found for {stream["label"]}')
+                        'url': m3u8_url,
+                        'headers': {
+                            'Referer': headers.get('referer', ''),
+                            'Origin': headers.get('origin', ''),
+                            'User-Agent': headers.get('user-agent', ''),
+                        }
+                    }
+
+                    if content:
+                        # Save playlist content to file
+                        playlist_file = f'playlists/{stream_key}.m3u8'
+                        os.makedirs('playlists', exist_ok=True)
+                        with open(playlist_file, 'w') as f:
+                            f.write(content)
+                        stream_data['playlist_file'] = playlist_file
+                        stream_data['has_content'] = True
+                        print(f'Saved playlist to {playlist_file}')
+                    else:
+                        stream_data['has_content'] = False
+
+                    resolved_streams.append(stream_data)
 
             if resolved_streams:
                 results.append({
