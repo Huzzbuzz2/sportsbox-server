@@ -18,12 +18,12 @@ HEADERS = {
     'Referer': 'https://go.webcric.com/',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'en-GB,en;q=0.9',
+    'Cookie': 'JSESSIONID=10mgs56mozktc1n4mnmmifgbk9; JSESSIONID=wj7nbdw77oonqxvg1v8f1h92',
 }
 
-# Known embed channel mappings for WebCric streams
 EMBED_CHANNELS = [
     'webcricn02',
-    'webcricn03', 
+    'webcricn03',
     'webcricn04',
     'webcricn05',
     'webcricn06',
@@ -33,38 +33,34 @@ EMBED_BASE = 'https://one.timesup.top/hembedplayer'
 
 
 def try_embed(channel, stream_id='6'):
-    """Try to fetch a timesup embed page and extract m3u8 URL."""
     embed_url = f'{EMBED_BASE}/{channel}/{stream_id}/850/480'
     try:
-        headers = {
+        embed_headers = {
             **HEADERS,
             'Referer': f'{WEBCRIC_BASE}/',
             'Origin': WEBCRIC_BASE,
         }
-        r = requests.get(embed_url, headers=headers, timeout=15)
-        print(f'Embed {embed_url} status: {r.status_code}')
-        print(f'Embed snippet: {r.text[:300]}')
+        r = requests.get(embed_url, headers=embed_headers, timeout=15)
+        print(f'Embed {channel} status: {r.status_code}')
+        print(f'Embed snippet: {r.text[:500]}')
 
-        # Look for m3u8
         m3u8 = re.search(r'(https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*)', r.text)
         if m3u8:
             return m3u8.group(1)
 
-        # Look for id and pk
         id_m = re.search(r'["\']?id["\']?\s*[:=]\s*["\']?(\d+)', r.text)
         pk_m = re.search(r'["\']?pk["\']?\s*[:=]\s*["\']?([a-f0-9]{80,})', r.text)
         if id_m and pk_m:
-            stream_url = f'https://muc002.myturn1.top:8088/live/{channel}/playlist.m3u8?id={id_m.group(1)}&pk={pk_m.group(1)}'
-            print(f'Built URL: {stream_url}')
-            return stream_url
+            url = f'https://muc002.myturn1.top:8088/live/{channel}/playlist.m3u8?id={id_m.group(1)}&pk={pk_m.group(1)}'
+            print(f'Built URL: {url}')
+            return url
 
     except Exception as e:
-        print(f'Error fetching embed {embed_url}: {e}')
+        print(f'Error {channel}: {e}')
     return None
 
 
 def get_webcric_matches():
-    """Scrape WebCric homepage for today's matches."""
     try:
         r = requests.get(WEBCRIC_BASE + '/', headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, 'html.parser')
@@ -111,7 +107,6 @@ def build_matches():
     matches_raw = get_webcric_matches()
     result = []
 
-    # Try to resolve streams via embed channels
     resolved_embeds = {}
     for i, channel in enumerate(EMBED_CHANNELS):
         url = try_embed(channel)
@@ -120,10 +115,9 @@ def build_matches():
 
     print(f'Resolved embeds: {resolved_embeds}')
 
-    for match_idx, match in enumerate(matches_raw):
+    for match in matches_raw:
         streams = []
         for page_idx, page in enumerate(match['pages']):
-            # Map stream pages to embed channels
             embed_idx = page_idx % len(EMBED_CHANNELS)
             if embed_idx in resolved_embeds:
                 streams.append({
@@ -131,7 +125,6 @@ def build_matches():
                     'url': resolved_embeds[embed_idx]
                 })
             else:
-                # Fall back to passing the page URL directly
                 streams.append({
                     'label': page['label'],
                     'url': page['url']
