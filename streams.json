@@ -1,1 +1,51 @@
-{"matches": [], "updated": ""}
+{
+  "updated": "2026-05-14 20:35:23",
+  "matches": [
+    {
+      "title": "IPL 2026",
+      "streams": [
+        {
+          "label": "Stream 1",
+          "url": "https://plu002.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Stream 2",
+          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Stream HD",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Star Sports",
+          "url": "https://mut001.myturn1.top:8088/live/starsports01/playlist.m3u8?id=123144&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Willow HD",
+          "url": "https://muc001.myturn1.top:8088/live/webcricwillow/playlist.m3u8?id=120375&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Hindi",
+          "url": "https://muc002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        }
+      ]
+    },
+    {
+      "title": "PAK v BAN",
+      "streams": [
+        {
+          "label": "Stream 1",
+          "url": "https://muc002.myturn1.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Stream 2",
+          "url": "https://muc001.myturn1.top:8088/live/webcricm05/playlist.m3u8?id=114516&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        },
+        {
+          "label": "Stream 3",
+          "url": "https://mut001.myturn1.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=fc6bdb39a9d9a4fef139c3b61d3372fa505b839f01d35ae10c6c7813d497f49ff222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11"
+        }
+      ]
+    }
+  ]
+}
