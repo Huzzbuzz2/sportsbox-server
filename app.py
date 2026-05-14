@@ -4,7 +4,7 @@ import re
 import json
 import os
 import time
-import threading 
+import threading
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
@@ -20,9 +20,51 @@ HEADERS = {
     'Accept-Language': 'en-GB,en;q=0.9',
 }
 
+# Known embed channel mappings for WebCric streams
+EMBED_CHANNELS = [
+    'webcricn02',
+    'webcricn03', 
+    'webcricn04',
+    'webcricn05',
+    'webcricn06',
+]
 
-def get_matches_from_webcric():
-    """Scrape WebCric homepage for today's matches and their stream pages."""
+EMBED_BASE = 'https://one.timesup.top/hembedplayer'
+
+
+def try_embed(channel, stream_id='6'):
+    """Try to fetch a timesup embed page and extract m3u8 URL."""
+    embed_url = f'{EMBED_BASE}/{channel}/{stream_id}/850/480'
+    try:
+        headers = {
+            **HEADERS,
+            'Referer': f'{WEBCRIC_BASE}/',
+            'Origin': WEBCRIC_BASE,
+        }
+        r = requests.get(embed_url, headers=headers, timeout=15)
+        print(f'Embed {embed_url} status: {r.status_code}')
+        print(f'Embed snippet: {r.text[:300]}')
+
+        # Look for m3u8
+        m3u8 = re.search(r'(https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*)', r.text)
+        if m3u8:
+            return m3u8.group(1)
+
+        # Look for id and pk
+        id_m = re.search(r'["\']?id["\']?\s*[:=]\s*["\']?(\d+)', r.text)
+        pk_m = re.search(r'["\']?pk["\']?\s*[:=]\s*["\']?([a-f0-9]{80,})', r.text)
+        if id_m and pk_m:
+            stream_url = f'https://muc002.myturn1.top:8088/live/{channel}/playlist.m3u8?id={id_m.group(1)}&pk={pk_m.group(1)}'
+            print(f'Built URL: {stream_url}')
+            return stream_url
+
+    except Exception as e:
+        print(f'Error fetching embed {embed_url}: {e}')
+    return None
+
+
+def get_webcric_matches():
+    """Scrape WebCric homepage for today's matches."""
     try:
         r = requests.get(WEBCRIC_BASE + '/', headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, 'html.parser')
@@ -50,7 +92,7 @@ def get_matches_from_webcric():
                 href = a['href']
                 if not href.startswith('http'):
                     href = WEBCRIC_BASE + '/' + href.lstrip('/')
-                label = a.get_text(strip=True) or 'Stream'
+                label = a.get_text(strip=True).encode('ascii', 'ignore').decode('ascii') or 'Stream'
                 pages.append({'label': label, 'url': href})
 
             if pages:
@@ -65,87 +107,40 @@ def get_matches_from_webcric():
         return []
 
 
-def resolve_stream_page(page_url):
-    """
-    Fetch a WebCric stream page, find the timesup embed URL,
-    fetch that with correct Referer, extract id+pk, build m3u8 URL.
-    """
-    try:
-        # Step 1: fetch the stream page
-        r = requests.get(page_url, headers=HEADERS, timeout=15)
-        html = r.text
-
-        # Step 2: find the timesup embed URL
-        embed_match = re.search(r'(https?://[^\s"\'<>]*timesup\.top[^\s"\'<>]*)', html)
-        if not embed_match:
-            embed_match = re.search(r'src=["\']([^"\']*hembedplayer[^"\']*)["\']', html)
-        
-        if not embed_match:
-            print(f'No embed URL found in {page_url}')
-            return None
-
-        embed_url = embed_match.group(1)
-        if embed_url.startswith('//'):
-            embed_url = 'https:' + embed_url
-
-        print(f'Found embed URL: {embed_url}')
-
-        # Step 3: fetch embed page with WebCric as referer
-        embed_headers = {
-            **HEADERS,
-            'Referer': page_url,
-            'Origin': WEBCRIC_BASE,
-        }
-        r2 = requests.get(embed_url, headers=embed_headers, timeout=15)
-        embed_html = r2.text
-
-        print(f'Embed page status: {r2.status_code}')
-        print(f'Embed page snippet: {embed_html[:500]}')
-
-        # Step 4: look for m3u8 directly
-        m3u8 = re.search(r'(https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*)', embed_html)
-        if m3u8:
-            return m3u8.group(1)
-
-        # Step 5: look for id and pk
-        id_m = re.search(r'["\']?id["\']?\s*[:=]\s*["\']?(\d+)', embed_html)
-        pk_m = re.search(r'["\']?pk["\']?\s*[:=]\s*["\']?([a-f0-9]{80,})', embed_html)
-        ch_m = re.search(r'hembedplayer/([^/\s"\']+)', embed_url)
-
-        if id_m and pk_m and ch_m:
-            channel = ch_m.group(1)
-            stream_id = id_m.group(1)
-            pk = pk_m.group(1)
-            url = f'https://muc002.myturn1.top:8088/live/{channel}/playlist.m3u8?id={stream_id}&pk={pk}'
-            print(f'Built m3u8: {url}')
-            return url
-
-        print(f'Could not extract stream from embed page')
-        return None
-
-    except Exception as e:
-        print(f'Error resolving {page_url}: {e}')
-        return None
-
-
 def build_matches():
-    matches_raw = get_matches_from_webcric()
+    matches_raw = get_webcric_matches()
     result = []
 
-    for match in matches_raw:
-        resolved_streams = []
-        for page in match['pages']:
-            m3u8 = resolve_stream_page(page['url'])
-            if m3u8:
-                resolved_streams.append({
-                    'label': page['label'].encode('ascii', 'ignore').decode('ascii'),
-                    'url': m3u8
+    # Try to resolve streams via embed channels
+    resolved_embeds = {}
+    for i, channel in enumerate(EMBED_CHANNELS):
+        url = try_embed(channel)
+        if url:
+            resolved_embeds[i] = url
+
+    print(f'Resolved embeds: {resolved_embeds}')
+
+    for match_idx, match in enumerate(matches_raw):
+        streams = []
+        for page_idx, page in enumerate(match['pages']):
+            # Map stream pages to embed channels
+            embed_idx = page_idx % len(EMBED_CHANNELS)
+            if embed_idx in resolved_embeds:
+                streams.append({
+                    'label': page['label'],
+                    'url': resolved_embeds[embed_idx]
+                })
+            else:
+                # Fall back to passing the page URL directly
+                streams.append({
+                    'label': page['label'],
+                    'url': page['url']
                 })
 
-        if resolved_streams:
+        if streams:
             result.append({
                 'title': match['title'],
-                'streams': resolved_streams
+                'streams': streams
             })
 
     return result
