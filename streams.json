@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-14 21:24:46",
+  "updated": "2026-05-14 21:29:43",
   "matches": [
     {
       "title": "IPL 2026",
       "streams": [
         {
           "label": "Stream 1",
-          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=205872680835&id=114607&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=205872808949&id=114607&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -17,7 +17,7 @@
         },
         {
           "label": "Stream 2",
-          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=20587762677&id=115656&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205871410114&id=115656&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -28,7 +28,7 @@
         },
         {
           "label": "Stream HD",
-          "url": "https://plu002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205874669509&id=115656&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://muc002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=20587159158&id=115656&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -39,7 +39,7 @@
         },
         {
           "label": "Star Sports",
-          "url": "https://muc001.myturn1.top:8088/live/starsports01/playlist.m3u8?vidictid=205878004752&id=123144&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/starsports01/playlist.m3u8?vidictid=205874437258&id=123144&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -50,7 +50,7 @@
         },
         {
           "label": "Willow HD",
-          "url": "https://plu002.myturn1.top:8088/live/webcricwillow/playlist.m3u8?vidictid=20587741283&id=120375&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricwillow/playlist.m3u8?vidictid=205873429281&id=120375&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -61,7 +61,7 @@
         },
         {
           "label": "Hindi",
-          "url": "https://mut001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=20587435863&id=119771&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205872694458&id=119771&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -77,7 +77,7 @@
       "streams": [
         {
           "label": "Stream 1",
-          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205872405117&id=114515&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205877806973&id=114515&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -88,7 +88,7 @@
         },
         {
           "label": "Stream 2",
-          "url": "https://mut001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205872599034&id=114516&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205874519663&id=114516&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
@@ -99,7 +99,7 @@
         },
         {
           "label": "Stream 3",
-          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205876136849&id=114515&pk=e8e07dc0f89ee9199caba4a2bc919cd08a67b73d8600cae101f86e007e9f3906f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205871814842&id=114515&pk=ca71e62657d21f0138755f43730bb0f9338b229b1adeb5417c56e41d079b0694f222427a8ee9d25ecae8892e20dcb3afaf6ad9ee1522e3480145d2c17324dd11",
           "headers": {
             "Referer": "https://one.timesup.top/",
             "Origin": "",
