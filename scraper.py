@@ -4,22 +4,62 @@ import time
 import requests
 import os
 import re
+from bs4 import BeautifulSoup
 
-STREAM_PAGES = [
-    {'title': 'IPL 2026', 'streams': [
-        {'label': 'Stream 1', 'url': 'https://go.webcric.com/watch-ipl-2026-live-cricket-streaming.htm'},
-        {'label': 'Stream 2', 'url': 'https://go.webcric.com/ipl-2026-live-cricket-streaming.htm'},
-        {'label': 'Stream HD', 'url': 'https://go.webcric.com/watch-ipl-live-cricket-streaming-3.htm'},
-        {'label': 'Star Sports', 'url': 'https://go.webcric.com/watch-ipl-2026-on-star-sports-live-cricket-streaming.htm'},
-        {'label': 'Willow HD', 'url': 'https://go.webcric.com/watch-ipl-2026-on-willow-live-cricket-streaming.htm'},
-        {'label': 'Hindi', 'url': 'https://go.webcric.com/watch-ipl-2026-in-hindi-live-cricket-streaming.htm'},
-    ]},
-    {'title': 'PAK v BAN', 'streams': [
-        {'label': 'Stream 1', 'url': 'https://go.webcric.com/watch-pakistan-vs-bangladesh-live-cricket-streaming.htm'},
-        {'label': 'Stream 2', 'url': 'https://go.webcric.com/pakistan-vs-bangladesh-cricket-live-streaming.htm'},
-        {'label': 'Stream 3', 'url': 'https://go.webcric.com/pakistan-vs-bangladesh-live-cricket-streaming.htm'},
-    ]},
-]
+WEBCRIC_BASE = 'https://go.webcric.com'
+
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36',
+    'Referer': 'https://go.webcric.com/',
+}
+
+
+def get_todays_matches():
+    """Scrape WebCric homepage to find today's matches and stream pages."""
+    try:
+        r = requests.get(WEBCRIC_BASE + '/', headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, 'html.parser')
+        matches = []
+
+        for ul in soup.find_all('ul'):
+            links = ul.find_all('a', href=True)
+            stream_links = [a for a in links if '.htm' in a.get('href', '')]
+            if not stream_links:
+                continue
+
+            # Get match title from previous sibling
+            title = None
+            for sibling in ul.previous_siblings:
+                t = sibling.get_text(strip=True) if hasattr(sibling, 'get_text') else str(sibling).strip()
+                if t and t not in ['\n', '']:
+                    title = t
+                    break
+
+            if not title:
+                continue
+
+            # Skip nav items
+            skip = ['scorecard', 'ranking', 'schedule', 'news', 'stat', 'result']
+            if any(s in title.lower() for s in skip):
+                continue
+
+            streams = []
+            for a in stream_links:
+                href = a['href']
+                if not href.startswith('http'):
+                    href = WEBCRIC_BASE + '/' + href.lstrip('/')
+                label = a.get_text(strip=True) or 'Stream'
+                streams.append({'label': label, 'url': href})
+
+            if streams:
+                clean_title = title.encode('ascii', 'ignore').decode('ascii').strip()
+                matches.append({'title': clean_title, 'streams': streams})
+                print(f'Found match: {clean_title} ({len(streams)} streams)')
+
+        return matches
+    except Exception as e:
+        print(f'Error fetching WebCric homepage: {e}')
+        return []
 
 
 def scrape_stream(page, url):
@@ -49,21 +89,13 @@ def scrape_stream(page, url):
 
     if m3u8_url and m3u8_headers:
         try:
-            # Fetch level 1 master playlist
             r = requests.get(m3u8_url, headers=m3u8_headers, timeout=15)
             if r.status_code == 200 and '#EXTM3U' in r.text:
-                print(f'Level 1 content: {r.text}')
-
-                # Follow to level 2 playlist
                 level2 = re.search(r'(https?://[^\s]+playlist\.m3u8[^\s]*)', r.text)
                 if level2:
                     level2_url = level2.group(1)
-                    print(f'Following to level 2: {level2_url}')
                     r2 = requests.get(level2_url, headers=m3u8_headers, timeout=15)
-                    print(f'Level 2 status: {r2.status_code}')
-                    print(f'Level 2 content: {r2.text[:1000]}')
                     if r2.status_code == 200 and '#EXTM3U' in r2.text:
-                        # Fix relative segment URLs to absolute
                         base = level2_url.split('playlist.m3u8')[0]
                         fixed = []
                         for line in r2.text.splitlines():
@@ -77,8 +109,6 @@ def scrape_stream(page, url):
                         m3u8_content = r.text
                 else:
                     m3u8_content = r.text
-            else:
-                print(f'Failed level 1: {r.status_code} - {r.text[:200]}')
         except Exception as e:
             print(f'Error fetching m3u8: {e}')
 
@@ -86,6 +116,18 @@ def scrape_stream(page, url):
 
 
 def main():
+    # Step 1: Get today's matches from WebCric homepage
+    print('Fetching today\'s matches from WebCric...')
+    todays_matches = get_todays_matches()
+    print(f'Found {len(todays_matches)} matches on WebCric today')
+
+    if not todays_matches:
+        print('No matches found today')
+        # Save empty results
+        with open('streams.json', 'w') as f:
+            json.dump({'updated': time.strftime('%Y-%m-%d %H:%M:%S'), 'matches': []}, f)
+        return
+
     results = []
 
     with sync_playwright() as p:
@@ -95,19 +137,24 @@ def main():
             viewport={'width': 390, 'height': 844},
         )
 
-        for match in STREAM_PAGES:
+        os.makedirs('playlists', exist_ok=True)
+
+        for match in todays_matches:
+            print(f'\nScraping streams for: {match["title"]}')
             resolved_streams = []
+
             for stream in match['streams']:
-                print(f'Scraping {stream["label"]} for {match["title"]}...')
+                print(f'  Scraping {stream["label"]}...')
                 page = context.new_page()
                 m3u8_url, headers, content = scrape_stream(page, stream['url'])
                 page.close()
 
                 if m3u8_url:
-                    stream_key = match['title'].replace(' ', '_') + '_' + stream['label'].replace(' ', '_')
+                    stream_key = match['title'].replace(' ', '_')[:30] + '_' + stream['label'].replace(' ', '_')[:20]
+                    stream_key = re.sub(r'[^a-zA-Z0-9_]', '', stream_key)
 
                     stream_data = {
-                        'label': stream['label'],
+                        'label': stream['label'].encode('ascii', 'ignore').decode('ascii'),
                         'url': m3u8_url,
                         'headers': {
                             'Referer': headers.get('referer', ''),
@@ -118,16 +165,17 @@ def main():
 
                     if content:
                         playlist_file = f'playlists/{stream_key}.m3u8'
-                        os.makedirs('playlists', exist_ok=True)
                         with open(playlist_file, 'w') as f:
                             f.write(content)
                         stream_data['playlist_file'] = playlist_file
                         stream_data['has_content'] = True
-                        print(f'Saved playlist to {playlist_file}')
+                        print(f'  Saved to {playlist_file}')
                     else:
                         stream_data['has_content'] = False
 
                     resolved_streams.append(stream_data)
+                else:
+                    print(f'  No stream found for {stream["label"]}')
 
             if resolved_streams:
                 results.append({
@@ -143,7 +191,7 @@ def main():
             'matches': results
         }, f, indent=2)
 
-    print(f'Done. Found {len(results)} matches.')
+    print(f'\nDone. Saved {len(results)} matches to streams.json')
 
 
 if __name__ == '__main__':
