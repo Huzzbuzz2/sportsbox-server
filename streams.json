@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-18 16:46:41",
+  "updated": "2026-05-18 18:30:21",
   "matches": [
     {
       "title": "IPL 2026",
       "streams": [
         {
           "label": "Cricket Stream 1",
-          "url": "https://muc002.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://plu002.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -17,7 +17,7 @@
         },
         {
           "label": "Cricket Stream 2",
-          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205919867495&id=115656&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205915651973&id=115656&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -28,7 +28,7 @@
         },
         {
           "label": "Cricket Stream 3",
-          "url": "https://muc002.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://mut001.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -39,7 +39,7 @@
         },
         {
           "label": "Cricket Stream 4",
-          "url": "https://mut001.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -50,7 +50,7 @@
         },
         {
           "label": "Cricket Stream 5",
-          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=20591997550&id=115656&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205916127294&id=115656&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -61,7 +61,7 @@
         },
         {
           "label": "Cricket Stream 6",
-          "url": "https://mut001.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -72,7 +72,7 @@
         },
         {
           "label": "Cricket Stream HD",
-          "url": "https://muc002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205915673047&id=115656&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=205914006557&id=115656&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -88,7 +88,7 @@
       "streams": [
         {
           "label": "Cricket Stream 1",
-          "url": "https://muc002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205916224183&id=114515&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205913602226&id=114515&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -99,7 +99,7 @@
         },
         {
           "label": "Cricket Stream 2",
-          "url": "https://muc001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205919227376&id=114516&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://mut001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205914123913&id=114516&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -110,7 +110,7 @@
         },
         {
           "label": "Cricket Stream 3",
-          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205915886554&id=114515&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205911034025&id=114515&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -121,7 +121,7 @@
         },
         {
           "label": "Cricket Stream 4",
-          "url": "https://mut001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205919336051&id=114516&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://mut001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205916759297&id=114516&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -132,7 +132,7 @@
         },
         {
           "label": "Cricket Stream 5",
-          "url": "https://mut001.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205913047656&id=114515&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=205912722541&id=114515&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -143,7 +143,7 @@
         },
         {
           "label": "Cricket Stream 6",
-          "url": "https://muc002.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=205913418431&id=114516&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=20591302427&id=114516&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -159,7 +159,7 @@
       "streams": [
         {
           "label": "Cricket Stream 1",
-          "url": "https://muc001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205912513390&id=119771&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205913965041&id=119771&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -170,7 +170,7 @@
         },
         {
           "label": "Cricket Stream 2",
-          "url": "https://muc002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205913537372&id=119771&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205915415549&id=119771&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
@@ -181,7 +181,7 @@
         },
         {
           "label": "Cricket Stream 3",
-          "url": "https://plu002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205913800913&id=119771&pk=5563af82af60b4a0e2df0e6551ce6c32f3e0d80973a08e8eb0b3ac0fc3ae14f4858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
+          "url": "https://muc002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=20591350965&id=119771&pk=925785edac532e82061971ad1a488f88b3b032b014207d70ea82955ec5c89ac1858321236e432079bb6620f9dd411e2d2db5c9391a342c553fce277e6f760832",
           "headers": {
             "Referer": "https://my.timesup.top/",
             "Origin": "",
