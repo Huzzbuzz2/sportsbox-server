@@ -1,1 +1,196 @@
-{"updated": "2026-05-30 09:54:58", "matches": []}
+{
+  "updated": "2026-05-30 11:18:14",
+  "matches": [
+    {
+      "title": "IPL 2026",
+      "streams": [
+        {
+          "label": "Cricket Stream 1",
+          "url": "https://plu002.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206033093610&id=114607&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_1.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 2",
+          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206031267989&id=115656&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_2.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 3",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206035089359&id=114607&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_3.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 4",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206034280156&id=114607&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_4.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 5",
+          "url": "https://plu002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206037085648&id=115656&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_5.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 6",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206031351643&id=114607&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_6.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream HD",
+          "url": "https://muc002.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206033365837&id=115656&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_2026_Cricket_Stream_HD.m3u8",
+          "has_content": true
+        }
+      ]
+    },
+    {
+      "title": "PAK v AUS",
+      "streams": [
+        {
+          "label": "Cricket Stream 1",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=206036387498&id=114515&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_AUS_Cricket_Stream_1.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 2",
+          "url": "https://muc001.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=206038516570&id=114515&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_AUS_Cricket_Stream_2.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 3",
+          "url": "https://mut001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=206033895233&id=114516&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_AUS_Cricket_Stream_3.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 4",
+          "url": "https://muc002.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=206038012602&id=114516&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_AUS_Cricket_Stream_4.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 5",
+          "url": "https://plu002.myturn1.top:8088/live/webcricm04/playlist.m3u8?vidictid=206038611065&id=114515&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_AUS_Cricket_Stream_5.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 6",
+          "url": "https://mut001.myturn1.top:8088/live/webcricm05/playlist.m3u8?vidictid=206034026912&id=114516&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/PAK_v_AUS_Cricket_Stream_6.m3u8",
+          "has_content": true
+        }
+      ]
+    },
+    {
+      "title": "IPL Hindi",
+      "streams": [
+        {
+          "label": "Cricket Stream 1",
+          "url": "https://muc002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=206038648134&id=119771&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_Hindi_Cricket_Stream_1.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 2",
+          "url": "https://muc002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=206038678190&id=119771&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_Hindi_Cricket_Stream_2.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Cricket Stream 3",
+          "url": "https://plu002.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=206035433979&id=119771&pk=99a64f1d0716e934ec0183d4b7355373ed7b2d389450432ad1bc7b868f27c5fc87770d527c20e0b02895175e7273401c5f543e4757ba8f55a60fd60a68cf07f9",
+          "headers": {
+            "Referer": "https://one.superover1.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/IPL_Hindi_Cricket_Stream_3.m3u8",
+          "has_content": true
+        }
+      ]
+    }
+  ]
+}
