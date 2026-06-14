@@ -1,18 +1,40 @@
 {
-  "updated": "2026-06-14 10:27:37",
+  "updated": "2026-06-14 12:26:44",
   "matches": [
     {
       "title": "FIFA 2026",
       "streams": [
         {
+          "label": "Stream 1",
+          "url": "https://muc002.myturn1.top:8088/live/webcricfifa1/playlist.m3u8?vidictid=206185387143&id=124249&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "headers": {
+            "Referer": "https://new.lastzone.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/FIFA_2026_Stream_1.m3u8",
+          "has_content": true
+        },
+        {
           "label": "Stream 2",
-          "url": "https://muc001.myturn1.top:8088/live/webcricfifa2/playlist.m3u8?vidictid=206186666118&id=117658&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://plu002.myturn1.top:8088/live/webcricfifa2/playlist.m3u8?vidictid=206186424337&id=117658&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
             "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
           },
           "playlist_file": "playlists/FIFA_2026_Stream_2.m3u8",
+          "has_content": true
+        },
+        {
+          "label": "Stream 3",
+          "url": "https://muc001.myturn1.top:8088/live/webcricfifa1/playlist.m3u8?vidictid=206187778271&id=124249&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "headers": {
+            "Referer": "https://new.lastzone.top/",
+            "Origin": "",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mobile) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+          },
+          "playlist_file": "playlists/FIFA_2026_Stream_3.m3u8",
           "has_content": true
         }
       ]
@@ -22,7 +44,7 @@
       "streams": [
         {
           "label": "Cricket Stream 1",
-          "url": "https://plu002.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206187904537&id=114607&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://mut001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206185660129&id=114607&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
@@ -33,7 +55,7 @@
         },
         {
           "label": "Cricket Stream 2",
-          "url": "https://muc002.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206184436303&id=114607&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206182265126&id=114607&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
@@ -44,7 +66,7 @@
         },
         {
           "label": "Cricket Stream 3",
-          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206188827302&id=115656&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206186805289&id=115656&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
@@ -55,7 +77,7 @@
         },
         {
           "label": "Cricket Stream 4",
-          "url": "https://plu001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206181381075&id=115656&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206183455058&id=115656&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
@@ -66,7 +88,7 @@
         },
         {
           "label": "Cricket Stream 5",
-          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=20618497927&id=114607&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://muc001.myturn1.top:8088/live/webcricn04/playlist.m3u8?vidictid=206182401232&id=114607&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
@@ -77,7 +99,7 @@
         },
         {
           "label": "Cricket Stream 6",
-          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206182921579&id=115656&pk=90a26d45db9d689cf871cd7d5566ce462147ab1c56f6712f3470645fc0d53cf2b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
+          "url": "https://mut001.myturn1.top:8088/live/webcricn02/playlist.m3u8?vidictid=206181303397&id=115656&pk=8f4cf38463f884ed0bb28030c37c77e54e6815a4c133280d2f09105e0d693c98b8ab731c706451f3b3d95d9a150bf63f14d9f9306ff9d8e4ed3fe83654a1e0b5",
           "headers": {
             "Referer": "https://new.lastzone.top/",
             "Origin": "",
